@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14532d">
+<meta name="description" content="Toppo Internet Cafe — online applications, registrations, document guidance and digital services. Contact us on WhatsApp."><title>Toppo Internet Cafe | Digital Service Centre</title>
+<style>
+:root{--green:#0b5735;--green2:#14764a;--deep:#082d20;--gold:#d9ad45;--ink:#17251e;--muted:#68776e;--line:#e4ebe6;--paper:#f6f9f6;--white:#fff;--shadow:0 16px 40px rgba(8,45,32,.08)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+a{color:inherit}
+.topbar{background:#fff;padding:14px clamp(18px,5vw,82px);display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line)}
+.brand{display:flex;gap:13px;align-items:center;color:var(--green);font-weight:900;letter-spacing:.6px;font-size:clamp(19px,2vw,27px);line-height:1.02;text-decoration:none}
+.brand small{display:block;font-size:10px;letter-spacing:.7px;color:#68776e;font-weight:700;margin-top:8px;text-transform:uppercase}
+.logo{width:58px;height:58px;display:grid;place-items:center;flex:none;background:#eaf4ed;border:1px solid #d9e9dd;border-radius:17px}
+.logo svg{width:48px;height:44px}
+.contactbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.contact{display:flex;align-items:center;gap:9px;color:#20372a;text-decoration:none;font-weight:750;font-size:13px;padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.contact .bubble{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#e9f5ec;color:var(--green);font-size:18px}
+.contact.email .bubble{background:#fff3e6;color:#a65b19}
+.contact small{display:block;font-size:11px;color:var(--muted);font-weight:600}
+nav{position:sticky;top:0;z-index:20;background:var(--deep);color:#fff;display:flex;justify-content:center;gap:clamp(16px,3vw,42px);padding:13px 18px;box-shadow:0 6px 18px #082d2020}
+nav a{color:#edf7ef;text-decoration:none;font-weight:700;font-size:13px;white-space:nowrap;transition:.2s}
+nav a:hover{color:#f0ca72}
+.hero{position:relative;overflow:hidden;padding:clamp(54px,7vw,94px) clamp(20px,8vw,120px);background:radial-gradient(circle at 82% 18%,#2a8258 0,transparent 28%),linear-gradient(115deg,#082d20 0%,#0b5735 62%,#14764a 100%);color:#fff}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff22;border-radius:50%;pointer-events:none}
+.hero:before{width:520px;height:520px;right:-120px;top:-250px}
+.hero:after{width:370px;height:370px;right:-40px;top:-170px}
+.hero-inner{position:relative;z-index:1;max-width:1180px;margin:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#f1d28b;font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:17px}
+.eyebrow:before{content:"";width:27px;height:2px;background:var(--gold)}
+.hero h1{font-size:clamp(38px,5.3vw,68px);line-height:1.04;letter-spacing:-1.8px;margin:0 0 17px;font-weight:850;max-width:680px}
+.hero h1 span{color:#f0ca72}
+.hero p{margin:0 0 27px;font-size:clamp(15px,1.5vw,18px);color:#dcebe1;max-width:610px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+a.btn,button.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#1d2b20;padding:12px 19px;border:1px solid transparent;border-radius:9px;text-decoration:none;font-weight:800;cursor:pointer;transition:.2s}
+a.btn:hover,button.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+a.btn.outline{background:transparent;color:#fff;border-color:#ffffff70}
+.hero-note{display:flex;gap:24px;flex-wrap:wrap;margin-top:35px;color:#e4f0e7;font-size:12px;font-weight:650}
+.hero-note span{display:flex;align-items:center;gap:8px}
+.hero-note b{color:#f0ca72;font-size:16px}
+main{max-width:1240px;margin:auto;padding:54px clamp(16px,4vw,36px)}
+.section{margin:0 0 54px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.kicker{font-size:11px;color:var(--green2);font-weight:850;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:7px}
+h2{color:var(--deep);margin:0;font-size:clamp(25px,3vw,34px);line-height:1.18;letter-spacing:-.5px}
+.section-desc,.muted{color:var(--muted);font-size:14px;margin:8px 0 0}
+.search{padding:13px 16px;border:1px solid #d6e1d9;border-radius:10px;min-width:280px;max-width:430px;width:38%;background:white;outline:none;box-shadow:0 4px 15px #082d2008}
+.search:focus,.field input:focus,.field textarea:focus{border-color:var(--green2);box-shadow:0 0 0 3px #14764a18}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:20px}
+.cat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px;text-align:left;cursor:pointer;min-height:116px;display:grid;grid-template-columns:48px 1fr 14px;grid-template-rows:1fr auto;column-gap:12px;align-items:center;box-shadow:0 5px 18px #082d2007;transition:.2s}
+.cat:hover,.cat.active{border-color:#72a989;background:#f4faf5;transform:translateY(-3px);box-shadow:var(--shadow)}
+.cat .cat-icon{grid-row:1/3;width:48px;height:48px;border-radius:12px;background:#edf6ef;display:grid;place-items:center;font-size:25px}
+.cat b{display:block;font-size:14px;line-height:1.25;color:#1b2b21;align-self:end}
+.cat .custom-pill{display:inline-block;justify-self:start;background:#edf5ed;color:var(--green);border-radius:20px;padding:2px 8px;font-size:10px;font-weight:800;margin-top:7px}
+.cat .arrow{grid-column:3;grid-row:1/3;color:var(--green);font-size:23px}
+.panel,.formpanel{display:none;background:white;border:1px solid var(--line);border-radius:16px;padding:clamp(18px,3vw,28px);margin-top:24px;box-shadow:var(--shadow)}
+.panel.show,.formpanel.show{display:block}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:18px}
+.service{background:#fbfdfb;border:1px solid var(--line);border-radius:10px;padding:14px;text-align:left;cursor:pointer;font:inherit;font-weight:650;color:#20372a;transition:.2s}
+.service:hover{border-color:var(--green2);background:#f1f8f2;transform:translateY(-1px)}
+.notice{background:#fff9eb;border:1px solid #f0dfb5;padding:13px 15px;border-radius:10px;font-size:12px;margin:14px 0;color:#66532c}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.doc{border:1px solid var(--line);border-radius:10px;padding:13px;background:#fcfdfc}
+.doc label,.field label{font-weight:750;font-size:13px;display:block;margin-bottom:6px;color:#263a2d}
+.doc small{display:block;color:var(--muted);font-size:11px;margin-bottom:8px}
+.doc input{width:100%;font-size:12px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{margin:9px 0}
+.field input,.field textarea{width:100%;padding:12px;border:1px solid #dce5de;border-radius:9px;font:inherit;outline:none;background:#fff}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.light{background:#eef4ef!important;color:var(--green)!important;border:1px solid #dce7de!important}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:22px}
+.step{background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px;box-shadow:0 5px 18px #082d2007}
+.step .number{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#edf6ef;color:var(--green);font-weight:900;margin-bottom:14px}
+.step h3{margin:0 0 5px;font-size:15px;color:#1b3023}
+.step small{color:var(--muted);font-size:12px}
+.info-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.info-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 5px 18px #082d2007}
+.info-card h3{margin:0 0 9px;color:var(--deep);font-size:20px}
+.info-card p{color:var(--muted);margin:0 0 14px;font-size:14px}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.feature{display:flex;gap:10px;align-items:flex-start;font-size:13px;font-weight:650}
+.feature i{font-style:normal;width:25px;height:25px;display:grid;place-items:center;border-radius:8px;background:#edf6ef;color:var(--green);flex:none}
+.faq-list{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+details{background:#fff;border:1px solid var(--line);border-radius:11px;padding:15px 17px}
+summary{cursor:pointer;font-weight:750;color:#23372a;font-size:14px}
+details p{color:var(--muted);font-size:13px;margin:10px 0 0}
+.contact-strip{background:linear-gradient(110deg,#082d20,#0b5735);border-radius:18px;padding:30px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.contact-strip h2{color:#fff;font-size:26px}
+.contact-strip p{color:#dcebe1;margin:7px 0 0;font-size:13px}
+footer{background:#061f16;color:#dbe8de;padding:38px clamp(18px,6vw,90px) 24px;margin-top:10px}
+.footer-inner{max-width:1240px;margin:auto;display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer b{color:#fff;font-size:18px;letter-spacing:.5px}
+footer p{font-size:13px;color:#b8cbbd}
+footer a{color:#f0ca72;text-decoration:none}
+.footer-bottom{max-width:1240px;margin:25px auto 0;padding-top:16px;border-top:1px solid #ffffff20;color:#9fb3a5;font-size:11px}
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:30;background:#1fae62;color:#fff;text-decoration:none;border-radius:50px;padding:13px 18px;font-weight:850;box-shadow:0 10px 25px #0003;display:flex;align-items:center;gap:8px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{padding-left:6vw;padding-right:6vw}}
+@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column;padding:13px 16px}.contactbar{width:100%;justify-content:flex-start}.contact{flex:1;min-width:190px}nav{justify-content:flex-start;overflow:auto;gap:22px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.services{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.info-grid{grid-template-columns:1fr}.faq-list{grid-template-columns:1fr}.search{width:100%;min-width:0;max-width:none}.section-head{align-items:stretch}.section-head>div{width:100%}}
+@media(max-width:520px){.brand{font-size:19px}.brand small{font-size:9px}.logo{width:48px;height:48px;border-radius:13px}.logo svg{width:41px}.contact{min-width:0;padding:7px}.contact small{font-size:10px}.hero{padding:48px 20px}.hero h1{font-size:39px;letter-spacing:-1px}.hero-note{gap:12px}.hero-note span{font-size:11px}.grid{gap:9px}.cat{padding:11px;grid-template-columns:38px 1fr 10px;column-gap:8px;min-height:108px}.cat .cat-icon{width:38px;height:40px;font-size:21px}.cat b{font-size:12px}.cat .custom-pill{font-size:9px;padding:2px 6px}.cat .arrow{font-size:18px}.services,.docs,.fields,.steps,.feature-list{grid-template-columns:1fr}.panel,.formpanel{padding:16px}.wa-float{right:13px;bottom:13px;padding:11px 14px;font-size:13px}}
+
+.lang-wrap{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:11px;padding:7px 10px;background:#f8fbf8;color:var(--green);font-size:14px}
+.lang-wrap select{border:0;background:transparent;color:var(--green);font:700 12px inherit;outline:none;cursor:pointer}
+.appointment-card{max-width:850px;margin-top:18px}
+.map-frame{min-height:290px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#eaf1eb}
+.map-frame iframe{width:100%;height:100%;min-height:290px;border:0}
+.review-actions{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+@media(max-width:760px){.review-actions{grid-template-columns:1fr}.map-frame{min-height:240px}.map-frame iframe{min-height:240px}.lang-wrap{width:max-content}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="logo"><svg viewBox="0 0 90 78" aria-hidden="true"><path d="M13 16h55a7 7 0 0 1 7 7v38H13a7 7 0 0 1-7-7V23a7 7 0 0 1 7-7Z" fill="#075b2d" stroke="#e5b52e" stroke-width="4"/><path d="M21 25h43v27H21z" fill="#fff"/><path d="M29 31h25M29 39h20M29 47h13" stroke="#075b2d" stroke-width="4" stroke-linecap="round"/><path d="M31 62v8m22-8v8M22 70h40" stroke="#075b2d" stroke-width="5" stroke-linecap="round"/><path d="M58 5 84 9 69 28" fill="none" stroke="#e5b52e" stroke-width="6" stroke-linecap="round"/></svg></span><span>TOPPO<br>INTERNET CAFE<small>Online Application • Digital Services • Form Filling</small></span></div><div class="contactbar"><label class="lang-wrap" for="languageSelect"><span>🌐</span><select id="languageSelect" aria-label="Choose language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="or">ଓଡ଼ିଆ</option></select></label><a class="contact" href="https://wa.me/919124738654" target="_blank"><span class="bubble">◉</span><span>WhatsApp<small>9124738654</small></span></a><a class="contact email" href="mailto:toppointernetcafe2021@gmail.com"><span class="bubble">✉</span><span>Email<small>toppointernetcafe2021@gmail.com</small></span></a></div></header>
+<nav aria-label="Main navigation"><a href="#">Home</a><a href="#services">All Services</a><a href="#about">About Us</a><a href="#how">How It Works</a><a href="#appointment" data-i18n="navAppointment">Appointment</a><a href="#location" data-i18n="navLocation">Location</a><a href="#reviews" data-i18n="navReviews">Reviews</a><a href="#faq">FAQs</a><a href="#contact">Contact</a></nav>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">Your trusted digital service partner</div><h1>Digital services.<br><span>Made simple.</span></h1><p>Get assistance with online applications, registrations, certificates, admissions and other essential digital services — all in one place.</p><div class="hero-actions"><a class="btn" href="#services">Explore All Services <span>→</span></a><a class="btn outline" href="https://wa.me/919124738654" target="_blank" rel="noopener">Chat on WhatsApp</a></div><div class="hero-note"><span><b>✓</b> Guided application support</span><span><b>✓</b> Convenient document checklist</span><span><b>✓</b> Direct WhatsApp assistance</span></div></div></section>
+<main>
+<section id="services" class="section"><div class="section-head"><div><div class="kicker">What we help with</div><h2>Explore Our Services</h2><p class="section-desc">Choose a category to view available services and start your request.</p></div><input class="search" id="search" placeholder="Search services — e.g. Odisha Police, PAN, Scholarship" aria-label="Search services"></div>
+<div class="grid" id="categories"></div>
+<div class="panel" id="servicePanel"><h2 id="catTitle"></h2><p class="muted">Select the service you need.</p><div class="services" id="servicesList"></div></div>
+<div class="formpanel" id="formPanel"><h2 id="serviceTitle">Service Application</h2><p class="muted" id="serviceCat"></p>
+<div class="notice"><b>Important:</b> Document requirements vary by official notification and applicant situation. Confirm the final checklist before applying. These are suggested checklists, not official guarantees.</div>
+<form id="requestForm"><h3 style="color:#14532d">1. Upload Required Documents</h3><div class="docs" id="docFields"></div>
+<h3 style="color:#14532d;margin-top:24px">2. Applicant Details</h3><div class="fields">
+<div class="field"><label>Full Name *</label><input name="name" required></div>
+<div class="field"><label>Mobile Number *</label><input name="mobile" required pattern="[6-9][0-9]{9}" maxlength="10" inputmode="numeric"></div>
+<div class="field"><label>Email (Optional)</label><input name="email" type="email"></div>
+<div class="field"><label>Village / Town *</label><input name="village" required></div>
+<div class="field"><label>Block / Tehsil</label><input name="block"></div>
+<div class="field"><label>District *</label><input name="district" required></div></div>
+<div class="field"><label id="messageLabel">Additional Message / Custom Service Details</label><textarea name="message" id="messageBox" rows="3" placeholder="For Custom Service, clearly describe the work you need..."></textarea></div>
+<div class="notice"><b>Service Charges:</b> Price will be discussed and confirmed on WhatsApp. Any official government / portal fee, if applicable, will be separate.</div>
+<div class="notice">This static website does not store uploaded files. On compatible devices, it can open the share sheet with files. Otherwise WhatsApp opens with your details and you must manually attach the files in the chat.</div>
+<div class="actions"><button class="btn" type="submit">Submit Request on WhatsApp</button><button class="btn light" type="button" id="back">Choose Another Service</button></div></form></div>
+</section>
+<section id="about" class="section"><div class="section-head"><div><div class="kicker">About our centre</div><h2>Local support for your digital needs</h2><p class="section-desc">Toppo Internet Cafe helps customers navigate online services with clear guidance and convenient communication.</p></div></div>
+<div class="info-grid"><div class="info-card"><h3>Welcome to Toppo Internet Cafe</h3><p>We provide assistance for online form filling, job and education applications, registrations, certificate-related services, document preparation and other digital work.</p><p>Our goal is to make online processes easier to understand — from selecting the right service to preparing documents and connecting with us for the next steps.</p><div class="feature-list"><div class="feature"><i>✓</i><span>Simple service selection</span></div><div class="feature"><i>✓</i><span>Guidance on documents</span></div><div class="feature"><i>✓</i><span>WhatsApp-based enquiry</span></div><div class="feature"><i>✓</i><span>Clear fee communication</span></div></div></div><div class="info-card"><h3>How we assist</h3><p>Every request is reviewed individually. Requirements, service charges and timelines may vary depending on the service and official portal rules.</p><p><b>Important:</b> Toppo Internet Cafe provides application assistance. Final approval, eligibility and processing timelines are decided by the concerned department or authority.</p><a class="btn" href="https://wa.me/919124738654" target="_blank" rel="noopener">Talk to our team →</a></div></div>
+</section>
+<section id="how" class="section"><div class="kicker">Simple four-step process</div><h2>How It Works</h2><p class="section-desc">Start your service request in a few easy steps.</p><div class="steps"><div class="step"><div class="number">01</div><h3>Choose Category</h3><small>Browse categories or search for the service you need.</small></div><div class="step"><div class="number">02</div><h3>Select Service</h3><small>Choose the exact service and review its suggested document checklist.</small></div><div class="step"><div class="number">03</div><h3>Share Details</h3><small>Enter your contact details and select relevant documents.</small></div><div class="step"><div class="number">04</div><h3>Connect on WhatsApp</h3><small>Send your request and confirm requirements, charges and next steps.</small></div></div></section>
+<section id="faq" class="section"><div class="kicker">Need to know</div><h2>Frequently Asked Questions</h2><p class="section-desc">A few quick answers before you submit a request.</p><div class="faq-list"><details><summary>Are the listed documents final?</summary><p>No. The checklist is a starting guide. Final requirements depend on the official notification, portal and applicant details. Please confirm before applying.</p></details><details><summary>How will I know the service charges?</summary><p>Service charges will be discussed and confirmed on WhatsApp before proceeding. Any official government or portal fee is separate.</p></details><details><summary>Does this website save my uploaded documents?</summary><p>No. This is a static website and it does not store documents on a server. Depending on your device, selected files may be shared through the device share sheet; otherwise you may need to attach them manually in WhatsApp.</p></details><details><summary>Does submitting a request guarantee approval?</summary><p>No. Approval, eligibility and processing time are decided by the relevant department or authority.</p></details></div></section>
+
+<section id="appointment" class="section">
+  <div class="kicker" data-i18n="appointmentKicker">Plan your visit</div>
+  <h2 data-i18n="appointmentTitle">Book an Appointment</h2>
+  <p class="section-desc" data-i18n="appointmentDesc">Choose a convenient date and time. Your appointment request will be sent to us on WhatsApp for confirmation.</p>
+  <div class="info-card appointment-card">
+    <form id="appointmentForm">
+      <div class="fields">
+        <div class="field"><label for="apName" data-i18n="nameLabel">Your Name *</label><input id="apName" name="name" required placeholder="Enter your full name"></div>
+        <div class="field"><label for="apMobile" data-i18n="mobileLabel">Mobile Number *</label><input id="apMobile" name="mobile" type="tel" pattern="[0-9]{10}" maxlength="10" required placeholder="10-digit mobile number"></div>
+        <div class="field"><label for="apDate" data-i18n="dateLabel">Preferred Date *</label><input id="apDate" name="date" type="date" required></div>
+        <div class="field"><label for="apTime" data-i18n="timeLabel">Preferred Time *</label><input id="apTime" name="time" type="time" required></div>
+      </div>
+      <div class="field"><label for="apPurpose" data-i18n="purposeLabel">Purpose of Visit *</label><input id="apPurpose" name="purpose" required placeholder="e.g. Scholarship application"></div>
+      <div class="actions"><button class="btn" type="submit" data-i18n="appointmentButton">Send Appointment Request →</button></div>
+      <p class="muted" data-i18n="appointmentNote">This is a request only. Your appointment is confirmed after we contact you.</p>
+    </form>
+  </div>
+</section>
+<section id="location" class="section">
+  <div class="kicker" data-i18n="locationKicker">Find us</div><h2 data-i18n="locationTitle">Location & Directions</h2>
+  <p class="section-desc" data-i18n="locationDesc">Search for Toppo Internet Cafe on Google Maps and check the route before visiting.</p>
+  <div class="info-grid">
+    <div class="info-card"><h3>Toppo Internet Cafe</h3><p data-i18n="locationHint">The exact business pin/address has not yet been verified on this website. Open Google Maps to find the listing or get directions.</p><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Toppo+Internet+Cafe" target="_blank" rel="noopener" data-i18n="mapButton">Find on Google Maps ↗</a></div>
+    <div class="map-frame"><iframe title="Google Maps search for Toppo Internet Cafe" src="https://www.google.com/maps?q=Toppo%20Internet%20Cafe&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+  </div>
+</section>
+<section id="reviews" class="section">
+  <div class="kicker" data-i18n="reviewsKicker">Customer feedback</div><h2 data-i18n="reviewsTitle">Reviews & Feedback</h2>
+  <p class="section-desc" data-i18n="reviewsDesc">Read available public feedback or share your experience. We do not display unverified ratings or testimonials.</p>
+  <div class="review-actions"><div class="info-card"><h3 data-i18n="reviewPublicTitle">Google Business Reviews</h3><p data-i18n="reviewPublicDesc">Open Google and look for the Toppo Internet Cafe business profile to view current customer reviews.</p><a class="btn" href="https://www.google.com/search?q=Toppo+Internet+Cafe+reviews" target="_blank" rel="noopener" data-i18n="readReviews">Search Google Reviews ↗</a></div><div class="info-card"><h3 data-i18n="reviewShareTitle">Share Your Experience</h3><p data-i18n="reviewShareDesc">Your feedback helps us improve our service and customer support.</p><a class="btn light" href="https://wa.me/919124738654?text=I%20would%20like%20to%20share%20feedback%20about%20Toppo%20Internet%20Cafe." target="_blank" rel="noopener" data-i18n="sendFeedback">Send Feedback on WhatsApp</a></div></div>
+</section>
+<section id="contact" class="section"><div class="contact-strip"><div><div class="kicker" style="color:#f0ca72">We are here to help</div><h2>Need help choosing a service?</h2><p>Send us your enquiry and our team can guide you on the next steps.</p></div><a class="btn" href="https://wa.me/919124738654" target="_blank" rel="noopener">WhatsApp: 9124738654 →</a></div></section>
+</main>
+<footer><div class="footer-inner"><div><b>TOPPO INTERNET CAFE</b><p>Your digital service partner for online applications, registrations and form assistance.</p></div><div><b>Contact Information</b><p>WhatsApp: <a href="https://wa.me/919124738654" target="_blank" rel="noopener">9124738654</a><br>Email: <a href="mailto:toppointernetcafe2021@gmail.com">toppointernetcafe2021@gmail.com</a></p></div></div><div class="footer-bottom">© 2026 Toppo Internet Cafe. All rights reserved. &nbsp;|&nbsp; Service assistance only. Final approval and official fees are subject to the concerned authority.</div></footer><a class="wa-float" href="https://wa.me/919124738654" target="_blank" rel="noopener" aria-label="Chat with Toppo Internet Cafe on WhatsApp">◉ <span>WhatsApp Us</span></a>
+<script>
+
+const LANG={
+en:{
+navAppointment:"Appointment",navLocation:"Location",navReviews:"Reviews",
+appointmentKicker:"Plan your visit",appointmentTitle:"Book an Appointment",appointmentDesc:"Choose a convenient date and time. Your appointment request will be sent to us on WhatsApp for confirmation.",
+nameLabel:"Your Name *",mobileLabel:"Mobile Number *",dateLabel:"Preferred Date *",timeLabel:"Preferred Time *",purposeLabel:"Purpose of Visit *",appointmentButton:"Send Appointment Request →",appointmentNote:"This is a request only. Your appointment is confirmed after we contact you.",
+locationKicker:"Find us",locationTitle:"Location & Directions",locationDesc:"Search for Toppo Internet Cafe on Google Maps and check the route before visiting.",locationHint:"The exact business pin/address has not yet been verified on this website. Open Google Maps to find the listing or get directions.",mapButton:"Find on Google Maps ↗",
+reviewsKicker:"Customer feedback",reviewsTitle:"Reviews & Feedback",reviewsDesc:"Read available public feedback or share your experience. We do not display unverified ratings or testimonials.",reviewPublicTitle:"Google Business Reviews",reviewPublicDesc:"Open Google and look for the Toppo Internet Cafe business profile to view current customer reviews.",readReviews:"Search Google Reviews ↗",reviewShareTitle:"Share Your Experience",reviewShareDesc:"Your feedback helps us improve our service and customer support.",sendFeedback:"Send Feedback on WhatsApp",
+searchPlaceholder:"Search services — e.g. Odisha Police, PAN, Scholarship",servicesTitle:"Explore Our Services",servicesDesc:"Choose a category to view available services and start your request.",aboutTitle:"Local support for your digital needs"
+},
+hi:{
+navAppointment:"अपॉइंटमेंट",navLocation:"हमारा पता",navReviews:"रिव्यू",
+appointmentKicker:"अपनी विज़िट तय करें",appointmentTitle:"अपॉइंटमेंट बुक करें",appointmentDesc:"अपनी सुविधानुसार तारीख और समय चुनें। पुष्टि के लिए आपकी रिक्वेस्ट WhatsApp पर भेजी जाएगी।",
+nameLabel:"आपका नाम *",mobileLabel:"मोबाइल नंबर *",dateLabel:"पसंदीदा तारीख *",timeLabel:"पसंदीदा समय *",purposeLabel:"आने का उद्देश्य *",appointmentButton:"अपॉइंटमेंट रिक्वेस्ट भेजें →",appointmentNote:"यह केवल अनुरोध है। हमसे संपर्क और पुष्टि होने के बाद ही अपॉइंटमेंट तय होगा।",
+locationKicker:"हम तक पहुंचें",locationTitle:"लोकेशन और रास्ता",locationDesc:"Google Maps पर Toppo Internet Cafe खोजें और आने से पहले रास्ता देख लें।",locationHint:"इस वेबसाइट पर दुकान का सटीक पता या मैप पिन अभी सत्यापित नहीं है। लिस्टिंग और रास्ते के लिए Google Maps खोलें।",mapButton:"Google Maps पर खोजें ↗",
+reviewsKicker:"ग्राहकों की राय",reviewsTitle:"रिव्यू और फीडबैक",reviewsDesc:"उपलब्ध सार्वजनिक रिव्यू देखें या अपना अनुभव साझा करें। यहां बिना सत्यापन के रेटिंग या प्रशंसापत्र नहीं दिखाए जाते।",reviewPublicTitle:"Google Business Reviews",reviewPublicDesc:"Toppo Internet Cafe की मौजूदा ग्राहक समीक्षाएं देखने के लिए Google पर बिजनेस प्रोफाइल खोजें।",readReviews:"Google Reviews खोजें ↗",reviewShareTitle:"अपना अनुभव बताएं",reviewShareDesc:"आपका फीडबैक हमारी सेवा और ग्राहक सहायता बेहतर बनाने में मदद करता है।",sendFeedback:"WhatsApp पर फीडबैक भेजें",
+searchPlaceholder:"सेवा खोजें — जैसे Odisha Police, PAN, Scholarship",servicesTitle:"हमारी सेवाएं देखें",servicesDesc:"सेवा की श्रेणी चुनें और अपनी रिक्वेस्ट शुरू करें।"
+},
+or:{
+navAppointment:"ସମୟ ନିର୍ଦ୍ଧାରଣ",navLocation:"ଠିକଣା",navReviews:"ମତାମତ",
+appointmentKicker:"ଆପଣଙ୍କ ଆଗମନ ଯୋଜନା କରନ୍ତୁ",appointmentTitle:"ସାକ୍ଷାତ୍ ସମୟ ବୁକ୍ କରନ୍ତୁ",appointmentDesc:"ଆପଣଙ୍କ ସୁବିଧା ଅନୁସାରେ ତାରିଖ ଓ ସମୟ ବାଛନ୍ତୁ। ନିଶ୍ଚିତକରଣ ପାଇଁ ଅନୁରୋଧ WhatsApp ରେ ପଠାଯିବ।",
+nameLabel:"ଆପଣଙ୍କ ନାମ *",mobileLabel:"ମୋବାଇଲ୍ ନମ୍ବର *",dateLabel:"ପସନ୍ଦର ତାରିଖ *",timeLabel:"ପସନ୍ଦର ସମୟ *",purposeLabel:"ଆସିବାର କାରଣ *",appointmentButton:"ସମୟ ଅନୁରୋଧ ପଠାନ୍ତୁ →",appointmentNote:"ଏହା କେବଳ ଏକ ଅନୁରୋଧ। ଆମେ ଯୋଗାଯୋଗ କରି ନିଶ୍ଚିତ କରିବା ପରେ ସମୟ ଧାର୍ଯ୍ୟ ହେବ।",
+locationKicker:"ଆମକୁ ଖୋଜନ୍ତୁ",locationTitle:"ଅବସ୍ଥାନ ଓ ରାସ୍ତା",locationDesc:"Google Maps ରେ Toppo Internet Cafe ଖୋଜନ୍ତୁ ଏବଂ ଆସିବା ପୂର୍ବରୁ ରାସ୍ତା ଦେଖନ୍ତୁ।",locationHint:"ଏହି ୱେବସାଇଟରେ ଦୋକାନର ସଠିକ୍ ଠିକଣା କିମ୍ବା ମାନଚିତ୍ର ପିନ୍ ଏପର୍ଯ୍ୟନ୍ତ ଯାଞ୍ଚ ହୋଇନାହିଁ। ଠିକଣା ଓ ରାସ୍ତା ପାଇଁ Google Maps ଖୋଲନ୍ତୁ।",mapButton:"Google Maps ରେ ଖୋଜନ୍ତୁ ↗",
+reviewsKicker:"ଗ୍ରାହକଙ୍କ ମତାମତ",reviewsTitle:"ସମୀକ୍ଷା ଓ ମତାମତ",reviewsDesc:"ଉପଲବ୍ଧ ସାର୍ବଜନୀନ ମତାମତ ପଢ଼ନ୍ତୁ କିମ୍ବା ନିଜ ଅନୁଭବ ଜଣାନ୍ତୁ। ଯାଞ୍ଚ ହୋଇନଥିବା ରେଟିଂ ଏଠାରେ ଦେଖାଯାଏ ନାହିଁ।",reviewPublicTitle:"Google Business Reviews",reviewPublicDesc:"Toppo Internet Cafe ର ଗ୍ରାହକ ସମୀକ୍ଷା ଦେଖିବା ପାଇଁ Google ରେ ବ୍ୟବସାୟ ପ୍ରୋଫାଇଲ୍ ଖୋଜନ୍ତୁ।",readReviews:"Google Reviews ଖୋଜନ୍ତୁ ↗",reviewShareTitle:"ଆପଣଙ୍କ ଅନୁଭବ ଜଣାନ୍ତୁ",reviewShareDesc:"ଆପଣଙ୍କ ମତାମତ ଆମ ସେବାକୁ ଆହୁରି ଭଲ କରିବାରେ ସାହାଯ୍ୟ କରେ।",sendFeedback:"WhatsApp ରେ ମତାମତ ପଠାନ୍ତୁ",
+searchPlaceholder:"ସେବା ଖୋଜନ୍ତୁ — ଯେପରି Odisha Police, PAN, Scholarship",servicesTitle:"ଆମର ସେବା",servicesDesc:"ସେବା ବର୍ଗ ବାଛନ୍ତୁ ଏବଂ ଅନୁରୋଧ ଆରମ୍ଭ କରନ୍ତୁ।"
+}};
+const CATEGORY_NAMES={
+hi:["सरकारी नौकरी एवं भर्ती","रेलवे एवं रक्षा नौकरी","शिक्षा एवं कॉलेज प्रवेश","छात्रवृत्ति सेवाएं","रोजगार कार्यालय सेवाएं","रिज्यूमे एवं करियर सेवाएं","जाति एवं समुदाय प्रमाणपत्र","आय एवं निवास प्रमाणपत्र","पैन कार्ड सेवाएं","वोटर आईडी सेवाएं","ड्राइविंग लाइसेंस एवं वाहन सेवाएं","सरकारी कल्याण योजनाएं","राशन कार्ड एवं खाद्य सुरक्षा","श्रमिक पंजीकरण","व्यवसाय एवं MSME पंजीकरण","अन्य ऑनलाइन एवं सरकारी सेवाएं"],
+or:["ସରକାରୀ ଚାକିରି ଓ ନିଯୁକ୍ତି","ରେଳବାଇ ଓ ପ୍ରତିରକ୍ଷା ଚାକିରି","ଶିକ୍ଷା ଓ କଲେଜ୍ ନାମଲେଖା","ଛାତ୍ରବୃତ୍ତି ସେବା","ନିଯୁକ୍ତି ବିନିମୟ ସେବା","ରେଜ୍ୟୁମେ ଓ କ୍ୟାରିୟର ସେବା","ଜାତି ଓ ସମ୍ପ୍ରଦାୟ ପ୍ରମାଣପତ୍ର","ଆୟ ଓ ବାସସ୍ଥାନ ପ୍ରମାଣପତ୍ର","ପାନ୍ କାର୍ଡ ସେବା","ଭୋଟର୍ ID ସେବା","ଡ୍ରାଇଭିଂ ଲାଇସେନ୍ସ ଓ ଯାନବାହନ ସେବା","ସରକାରୀ କଲ୍ୟାଣ ଯୋଜନା","ରାସନ୍ କାର୍ଡ ଓ ଖାଦ୍ୟ ସୁରକ୍ଷା","ଶ୍ରମିକ ପଞ୍ଜୀକରଣ","ବ୍ୟବସାୟ ଓ MSME ପଞ୍ଜୀକରଣ","ଅନ୍ୟାନ୍ୟ ଅନଲାଇନ୍ ଓ ସରକାରୀ ସେବା"]
+};
+let currentLang="en";
+function applyLanguage(lang){
+ currentLang=lang;document.documentElement.lang=lang==="or"?"or":lang;
+ const d=LANG[lang]||LANG.en;
+ document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(d[k])el.textContent=d[k]});
+ const search=document.getElementById("search");search.placeholder=d.searchPlaceholder;
+ document.querySelectorAll(".section-head h2").forEach(el=>{if(el.textContent==="Explore Our Services"||el.textContent==="हमारी सेवाएं देखें"||el.textContent==="ଆମର ସେବା")el.textContent=d.servicesTitle});
+ document.querySelectorAll(".section-head .section-desc").forEach(el=>{if(el.textContent.startsWith("Choose a category")||el.textContent.startsWith("सेवा की श्रेणी")||el.textContent.startsWith("ସେବା ବର୍ଗ"))el.textContent=d.servicesDesc});
+ render(search.value);
+ if(panel.classList.contains("show") && ci>=0) showCat(ci);
+}
+document.getElementById("languageSelect").addEventListener("change",e=>applyLanguage(e.target.value));
+
+const WA="919124738654";
+const cats=[
+["💼","Government Jobs & Recruitment",["Odisha Police Constable","Odisha Police SI","OPSC / OCS","OSSC Recruitment","OSSSC Recruitment","SSC CGL / CHSL / MTS / GD","Banking Recruitment – SBI / IBPS","Central Government Job Application"]],
+["🚆","Railway & Defence Jobs",["Railway RRB Recruitment","Army Recruitment","Navy Recruitment","Air Force Recruitment","CRPF / BSF / CISF Recruitment","Other Defence Recruitment"]],
+["🎓","Education & College Admission",["+2 Admission","+3 / Degree College Admission","ITI Admission","Polytechnic Admission","B.Ed Admission","Nursing Admission","Engineering Admission","School Admission"]],
+["🏅","Scholarship Services",["Post Matric Scholarship","Pre Matric Scholarship","National Scholarship Portal (NSP)","Odisha State Scholarship","Scholarship Renewal","Scholarship Correction","Scholarship Status Check"]],
+["🧑‍💼","Employment Exchange Services",["New Employment Exchange Registration","Employment Exchange Renewal","Employment Profile Correction","Unverified to Live Assistance","Employment Card Download","NCS Jobseeker Registration"]],
+["📝","Resume & Career Services",["Resume / CV Preparation","Job Application Assistance","Apprenticeship Registration – NAPS","Apprenticeship Registration – NATS","Online Job Profile Creation","Cover Letter Typing"]],
+["📜","Caste & Community Certificates",["ST Certificate Application","SC Certificate Application","OBC / SEBC Certificate","EWS Certificate","OBC Non-Creamy Layer Certificate","Community Certificate Assistance"]],
+["🏠","Income & Residence Certificates",["Income Certificate","Resident Certificate","Legal Heir Certificate","Solvency Certificate","Guardianship Certificate","Other Revenue Certificate Assistance"]],
+["💳","PAN Card Services",["New PAN Application","PAN Correction Application","e-PAN Download","PAN Status Check","PAN-Aadhaar Link Status Assistance"]],
+["🗳️","Voter ID Services",["New Voter Registration","Voter ID Correction","Address Change in Voter ID","Voter ID Download","Electoral Roll Search"]],
+["🚗","Driving Licence & Vehicle Services",["Learner Licence Application","Driving Licence Application Assistance","DL Renewal Assistance","Driving Licence Download","Vehicle RC Download Assistance"]],
+["🏛️","Government Welfare Schemes",["PM-KISAN Registration / e-KYC Assistance","Subhadra Yojana Assistance","PM Awas Yojana Assistance","Pension Application Assistance","Ayushman Card Assistance","Other Government Scheme Application"]],
+["🍚","Ration Card & Food Security",["New Ration Card Assistance","Ration Card Member Addition","Ration Card Correction","Ration Card Download","Ration Card Status Check"]],
+["👷","Labour & Worker Registration",["e-Shram Registration","Labour Card Application","Construction Worker Registration","Labour Card Renewal Assistance","Worker Welfare Scheme Assistance"]],
+["🏪","Business & MSME Registration",["Udyam / MSME Registration","GST Registration Assistance","GST Return Filing Assistance","FSSAI Registration Assistance","Trade Licence Assistance","GeM Seller Registration Assistance","Digital Signature Certificate Assistance"]],
+["🌐","Other Online & Government Services",["Police Verification Assistance","Character Certificate Assistance","RTI Application Assistance","Online Grievance Registration","Government Portal Registration","Passport Application Assistance","Other Online Form Filling"]]
+];
+cats.forEach(c=>c[2].push("Custom Service / Other Request"));
+const commonDocs=[
+["Passport-size photograph","Scanned signature","Aadhaar / identity proof","Educational certificates / marksheets","Category certificate (if applicable)","Active mobile number"],
+["Passport-size photograph","Aadhaar / identity proof","Educational certificate (if required)","Category certificate (if applicable)","Active mobile number"],
+["Passport-size photograph","Aadhaar / identity proof","Previous academic marksheet","School / college details","Bank passbook (if required)","Income / caste certificate (if applicable)"],
+["Aadhaar / identity proof","Previous marksheets","Income / caste certificate (if applicable)","Bank passbook (if required)","Mobile number"],
+["Aadhaar card / identity proof","Passport-size photograph","Educational certificate","Mobile number","Existing employment registration details (if applicable)"],
+["Existing resume (if available)","Educational certificates","Work experience details (if any)","Passport-size photograph","Contact details"],
+["Aadhaar / identity proof","Applicant photograph","Residence proof","Parent / family details (if required)","Supporting community record (if required)"],
+["Aadhaar / identity proof","Applicant photograph (if required)","Address proof","Income / supporting proof","Mobile number"],
+["Aadhaar / identity proof","PAN details (for correction, if applicable)","Date of birth proof (if required)","Registered mobile access may be needed"],
+["Aadhaar / identity proof","Photograph / signature (if required)","Address proof","Existing voter details (for correction)","Mobile number"],
+["Aadhaar / identity proof","Date of birth proof","Address proof","Existing DL / learner details (if applicable)","Mobile number"],
+["Aadhaar / identity proof","Bank passbook (if applicable)","Land / farmer / family details (as applicable)","Photograph (if required)","Mobile number"],
+["Aadhaar / identity proof","Existing ration card (if applicable)","Family member details","Address proof","Mobile number"],
+["Aadhaar / identity proof","Bank passbook (if applicable)","Photograph (if required)","Work / occupation details","Mobile number"],
+["Aadhaar / PAN (as applicable)","Business address proof","Business details","Bank details (if required)","Mobile number / email"],
+["Aadhaar / identity proof (if required)","Relevant supporting document","Applicant details","Mobile number"]
+];
+let ci=0,si=0,chosen="";
+const catEl=document.getElementById("categories"),panel=document.getElementById("servicePanel"),formPanel=document.getElementById("formPanel");
+function render(filter=""){catEl.innerHTML="";cats.forEach((c,i)=>{if(filter&&!((c[1]+" "+c[2].join(" ")).toLowerCase().includes(filter.toLowerCase())))return;let b=document.createElement("button");b.className="cat"+(i===ci?" active":"");const translated=(CATEGORY_NAMES[currentLang]||[])[i]||c[1];b.innerHTML=`<span class="cat-icon">${c[0]}</span><b>${translated}</b><span class="custom-pill">${currentLang==="hi"?"+ अन्य सेवा":currentLang==="or"?"+ ଅନ୍ୟ ସେବା":"+ Custom Service"}</span><span class="arrow">›</span>`;b.onclick=()=>showCat(i);catEl.appendChild(b)})}
+function showCat(i){ci=i;render(document.getElementById("search").value);document.getElementById("catTitle").textContent=(CATEGORY_NAMES[currentLang]||[])[i]||cats[i][1];let list=document.getElementById("servicesList");list.innerHTML="";cats[i][2].forEach((s,j)=>{let b=document.createElement("button");b.className="service";b.textContent=s+"  →";b.onclick=()=>showService(i,j);list.appendChild(b)});panel.classList.add("show");formPanel.classList.remove("show");panel.scrollIntoView({behavior:"smooth",block:"start"})}
+function showService(i,j){ci=i;si=j;chosen=cats[i][2][j];const msgBox=document.getElementById("messageBox");msgBox.required=(chosen==="Custom Service / Other Request");document.getElementById("messageLabel").textContent=msgBox.required?"Describe Your Custom Service *":"Additional Message (Optional)";document.getElementById("serviceTitle").textContent=chosen;document.getElementById("serviceCat").textContent=cats[i][1];let docs=document.getElementById("docFields");docs.innerHTML="";const checklist = chosen === "Custom Service / Other Request" ? ["Describe the service you need","Upload any relevant document (if available)"] : commonDocs[i];
+checklist.forEach((d,k)=>{let div=document.createElement("div");div.className="doc";div.innerHTML=`<label>${d}</label><small>Choose a clear JPG, PNG or PDF file. Recommended maximum 5 MB.</small><input type="file" name="document${k}" accept=".jpg,.jpeg,.png,.pdf"><small class="filename"></small>`;let inp=div.querySelector("input");inp.onchange=()=>{let f=inp.files[0];div.querySelector(".filename").textContent=f?f.name+" ("+(f.size/1048576).toFixed(2)+" MB)":"";if(f&&f.size>5*1048576){alert("Please choose a file under 5 MB.");inp.value="";div.querySelector(".filename").textContent=""}};docs.appendChild(div)});formPanel.classList.add("show");formPanel.scrollIntoView({behavior:"smooth",block:"start"})}
+document.getElementById("search").addEventListener("input",e=>{render(e.target.value);if(!e.target.value.trim()){panel.classList.remove("show");formPanel.classList.remove("show")}});
+document.getElementById("back").onclick=()=>{formPanel.classList.remove("show");panel.scrollIntoView({behavior:"smooth"})};
+document.getElementById("requestForm").onsubmit=async e=>{e.preventDefault();let f=e.currentTarget,d=new FormData(f),files=[...document.querySelectorAll("#docFields input[type=file]")].filter(x=>x.files.length).map(x=>x.files[0]);let msg=["TOPPO INTERNET CAFE – SERVICE REQUEST","Category: "+cats[ci][1],"Service: "+chosen,"Name: "+d.get("name"),"Mobile: "+d.get("mobile"),"Email: "+(d.get("email")||"Not provided"),"Village/Town: "+d.get("village"),"Block/Tehsil: "+(d.get("block")||"Not provided"),"District: "+d.get("district"),"Service charges: To be discussed and confirmed on WhatsApp","Selected documents: "+(files.length?files.map(x=>x.name).join(", "):"None"),"Message: "+(d.get("message")||"None"),"Please confirm documents, fees and next steps."].join("\n");let url="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);if(files.length&&navigator.share&&navigator.canShare&&navigator.canShare({files})){try{await navigator.share({title:"Toppo Internet Cafe Request",text:msg,files});return}catch(err){if(err.name==="AbortError")return}}window.open(url,"_blank","noopener,noreferrer");if(files.length)alert("WhatsApp opened. Please manually attach your selected documents in the chat.")};
+document.getElementById("appointmentForm").addEventListener("submit",e=>{
+ e.preventDefault();const d=new FormData(e.currentTarget);
+ const message=["TOPPO INTERNET CAFE – APPOINTMENT REQUEST","Name: "+d.get("name"),"Mobile: "+d.get("mobile"),"Preferred date: "+d.get("date"),"Preferred time: "+d.get("time"),"Purpose: "+d.get("purpose"),"Please confirm availability."].join("\n");
+ window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(message),"_blank","noopener,noreferrer");
+});
+const dateInput=document.getElementById("apDate");dateInput.min=new Date().toISOString().split("T")[0];
+render();
+</script>
+</body></html>
